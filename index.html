@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💍 A Special Question For You</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Preloader / Welcome Screen -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="envelope" id="envelope">
+        <div class="envelope-top"></div>
+        <div class="envelope-body">
+          <div class="letter">💌</div>
+        </div>
+      </div>
+      <p class="preloader-text">You have a special letter...</p>
+      <button class="open-btn" id="openBtn">Open It ❤️</button>
+    </div>
+  </div>
+
+  <!-- 3D Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Floating Petals Container -->
+  <div id="petals-container"></div>
+
+  <!-- Main Content Overlay -->
+  <div id="main-content" class="hidden">
+
+    <!-- Section 1: Intro -->
+    <section class="scene scene-1" id="scene1">
+      <div class="text-block fade-in">
+        <h1 class="script-font">My Dearest Love,</h1>
+        <p class="sub-text">Every moment with you feels like a beautiful dream I never want to wake up from...</p>
+        <div class="scroll-hint">
+          <span>Scroll Down</span>
+          <div class="scroll-arrow">▾</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Journey -->
+    <section class="scene scene-2" id="scene2">
+      <div class="text-block fade-in">
+        <h2 class="script-font">Our Journey Together</h2>
+        <p class="sub-text">From the first moment I saw you, I knew my life had changed forever. Your smile became my favourite sight, your laugh my favourite sound, and your happiness my greatest purpose.</p>
+      </div>
+    </section>
+
+    <!-- Section 3: Reasons -->
+    <section class="scene scene-3" id="scene3">
+      <div class="text-block fade-in">
+        <h2 class="script-font">Why I Love You</h2>
+        <div class="reasons-grid">
+          <div class="reason-card"><span class="reason-emoji">💖</span><p>Your beautiful heart</p></div>
+          <div class="reason-card"><span class="reason-emoji">😊</span><p>Your magical smile</p></div>
+          <div class="reason-card"><span class="reason-emoji">🌟</span><p>Your amazing soul</p></div>
+          <div class="reason-card"><span class="reason-emoji">🤗</span><p>Your warm hugs</p></div>
+          <div class="reason-card"><span class="reason-emoji">💪</span><p>Your strength</p></div>
+          <div class="reason-card"><span class="reason-emoji">🦋</span><p>The butterflies you give me</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: The Question -->
+    <section class="scene scene-4" id="scene4">
+      <div class="ring-scene" id="ringScene">
+        <div class="ring-box" id="ringBox">
+          <div class="ring-box-lid" id="ringBoxLid"></div>
+          <div class="ring-box-base">
+            <div class="ring-3d" id="ring3d">
+              <div class="ring-band"></div>
+              <div class="diamond">💎</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-block fade-in question-block">
+        <h1 class="script-font big-question" id="bigQuestion">Will You Marry Me?</h1>
+        <div class="answer-buttons" id="answerButtons">
+          <button class="btn-yes" id="btnYes">Yes! 💍</button>
+          <button class="btn-no" id="btnNo">No 😅</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Celebration (hidden until "Yes") -->
+    <section class="scene scene-5 hidden" id="scene5">
+      <div class="celebration-container">
+        <h1 class="script-font celebration-text">She Said Yes!</h1>
+        <div class="heart-explosion" id="heartExplosion"></div>
+        <p class="sub-text celebration-sub">Forever & Always, Together ❤️</p>
+        <div class="firework-container" id="fireworks"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Background Music Toggle -->
+  <button class="music-btn" id="musicBtn" title="Toggle Music">🎵</button>
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
